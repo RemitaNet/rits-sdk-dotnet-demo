@@ -1,0 +1,2 @@
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csprojAssemblyReference.cache
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csproj.CoreCompileInputs.cache
