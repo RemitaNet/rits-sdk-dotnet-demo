@@ -8,7 +8,7 @@ namespace RITNetSdkDemo
     {
         static void Main(string[] args)
         {
-             Console.WriteLine("##############################");
+            Console.WriteLine("##############################");
             Console.WriteLine("## INITIALIZING CREDENTIALS ##");
             Console.WriteLine("##############################");
             Console.WriteLine(" ");
@@ -68,7 +68,6 @@ namespace RITNetSdkDemo
             Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(bulkPaymentResponseData));
 
             Console.ReadLine();
-
         }
     }
 }
