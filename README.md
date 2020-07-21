@@ -1,2 +1,2 @@
-# rits-sdk-dotnet-demo
+# RITs SDK .Net Demo
 A sample C# Console app to demo RITS SDK
