@@ -51,11 +51,11 @@ namespace RITNetSdkDemo
             Console.WriteLine("###### ADD ACCOUNT ######");
             Console.WriteLine("#########################");
             Console.WriteLine(" ");
-            credentials.MerchantId = "DEMOMDA1234";
-            credentials.ApiToken = "bmR1ZFFFWEx5R2c2NmhnMEk5a25WenJaZWZwbHFFYldKOGY0bHlGZnBZQ1N5WEpXU2Y1dGt3PT0=";
-            credentials.ApiKey = "REVNT01EQTEyMzR8REVNT01EQQ==";
-            credentials.EncKey = "nbzjfdiehurgsxct";
-            credentials.EncVector = "sngtmqpfurxdbkwj";
+            credentials.MerchantId = "42192033";
+            credentials.ApiToken = "TmNGYlc4RHl6ajdCWUtxNTFmTnR1MG1IRzFjcVByQ1htbmJJL2V1ZVQ5eXl1dmRyN0xvL29nPT0=";
+            credentials.ApiKey = "REVNT1RFQ0gxMjM0fERFTU9URUNI";
+            credentials.EncKey = "wiavbnktudcprxjf";
+            credentials.EncVector = "finvwsegqzbtuykj";
             remitaRITs = new RemitaRITs(credentials);
             AddAccountPayload addAccountPayload = new AddAccountPayload();
             addAccountPayload.AccountNo = "0581234567890";
