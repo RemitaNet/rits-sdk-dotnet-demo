@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RemitaRITsGateway.Com.Systemspecs.Paymentinfra;
 using RemitaRITsGateway.Com.Systemspecs.Paymentinfra.RitsAccountEnquiry;
+using RemitaRITsGateway.Com.Systemspecs.Paymentinfra.RitsAddAccount;
 using RemitaRITsGateway.Com.Systemspecs.Paymentinfra.RitsBulkPayment;
 using RemitaRITsGateway.Com.Systemspecs.Paymentinfra.RitsInit;
 using System;
@@ -44,6 +45,19 @@ namespace RITNetSdkDemo
             payload.RequestId = "48934799767878902";
             AccountEnquiryResponseData accountEnquiryResponseData = remitaRITs.accountEnquiry(payload);
             Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(accountEnquiryResponseData));
+
+            Console.WriteLine(" ");
+            Console.WriteLine("#########################");
+            Console.WriteLine("###### ADD ACCOUNT ######");
+            Console.WriteLine("#########################");
+            Console.WriteLine(" ");
+            AddAccountPayload addAccountPayload = new AddAccountPayload();
+            addAccountPayload.AccountNo = "0581234567890";
+            addAccountPayload.BankCode = "058";
+            addAccountPayload.RequestId = "489347";
+            addAccountPayload.TransRef = "4893478";
+            AddAccountResponseData addAccountResponseData = remitaRITs.addAccount(addAccountPayload);
+            Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(addAccountResponseData));
 
             Console.WriteLine(" ");
             Console.WriteLine("#############################");

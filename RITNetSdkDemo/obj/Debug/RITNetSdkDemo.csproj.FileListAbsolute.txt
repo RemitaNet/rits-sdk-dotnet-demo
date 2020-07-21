@@ -10,3 +10,12 @@ D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csproj.Co
 D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csproj.CopyComplete
 D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.exe
 D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.pdb
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\RITNetSdkDemo.exe
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\RITNetSdkDemo.pdb
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\RemitaRITsGateway.dll
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\RemitaRITsGateway.pdb
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csproj.CopyComplete
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.exe
+C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.pdb
