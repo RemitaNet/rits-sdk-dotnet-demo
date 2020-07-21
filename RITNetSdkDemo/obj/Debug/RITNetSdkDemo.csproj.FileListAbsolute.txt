@@ -1,2 +1,12 @@
 C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csprojAssemblyReference.cache
 C:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csproj.CoreCompileInputs.cache
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\RITNetSdkDemo.exe
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\RITNetSdkDemo.pdb
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\RemitaRITsGateway.dll
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csprojAssemblyReference.cache
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csproj.CoreCompileInputs.cache
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.csproj.CopyComplete
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.exe
+D:\Projects\rits-sdk-dotnet-demo\RITNetSdkDemo\obj\Debug\RITNetSdkDemo.pdb

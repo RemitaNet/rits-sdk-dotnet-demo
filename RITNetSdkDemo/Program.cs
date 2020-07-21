@@ -1,4 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using RemitaRITsGateway.Com.Systemspecs.Paymentinfra;
+using RemitaRITsGateway.Com.Systemspecs.Paymentinfra.RitsAccountEnquiry;
+using RemitaRITsGateway.Com.Systemspecs.Paymentinfra.RitsBulkPayment;
+using RemitaRITsGateway.Com.Systemspecs.Paymentinfra.RitsInit;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
