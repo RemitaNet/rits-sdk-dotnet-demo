@@ -14,24 +14,15 @@ namespace RITNetSdkDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("##############################");
-            Console.WriteLine("## INITIALIZING CREDENTIALS ##");
-            Console.WriteLine("##############################");
+            Console.WriteLine("#########################################################");
+            Console.WriteLine("## INITIALIZING REMITA PAYMENT CREDENTIALS AND GATEWAY ##");
+            Console.WriteLine("#########################################################");
             Console.WriteLine(" ");
             Credentials credentials = new Credentials();
             credentials.TimeoutInMilliSec = 10000;
             credentials.ReadWriteTimeoutMilliSec = 150000;
-            credentials.MerchantId = "DEMOMDA1234";
-            credentials.ApiToken = "bmR1ZFFFWEx5R2c2NmhnMEk5a25WenJaZWZwbHFFYldKOGY0bHlGZnBZQ1N5WEpXU2Y1dGt3PT0=";
-            credentials.ApiKey = "REVNT01EQTEyMzR8REVNT01EQQ==";
-            credentials.EncKey = "nbzjfdiehurgsxct";
-            credentials.EncVector = "sngtmqpfurxdbkwj";
             credentials.Environment = "TEST";
 
-            Console.WriteLine("#########################################");
-            Console.WriteLine("## INITIALIZING REMITA PAYMENT GATEWAY ##");
-            Console.WriteLine("#########################################");
-            Console.WriteLine(" ");
             RemitaRITs remitaRITs = new RemitaRITs(credentials);
 
             Console.WriteLine(" ");
@@ -39,18 +30,42 @@ namespace RITNetSdkDemo
             Console.WriteLine("###### ACCOUNT ENQUIRY ######");
             Console.WriteLine("#############################");
             Console.WriteLine(" ");
-            AccountEnquiryPayload payload = new AccountEnquiryPayload();
-            payload.AccountNo = "0581234567890";
-            payload.BankCode = "058";
-            payload.RequestId = "48934799767878902";
-            AccountEnquiryResponseData accountEnquiryResponseData = remitaRITs.accountEnquiry(payload);
-            Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(accountEnquiryResponseData));
+            AccountEnquiry(credentials, remitaRITs);
 
             Console.WriteLine(" ");
             Console.WriteLine("#########################");
             Console.WriteLine("###### ADD ACCOUNT ######");
             Console.WriteLine("#########################");
             Console.WriteLine(" ");
+            AddAccount(credentials, remitaRITs);
+
+            Console.WriteLine(" ");
+            Console.WriteLine("############################");
+            Console.WriteLine("####### BULK PAYMENT #######");
+            Console.WriteLine("############################");
+            Console.WriteLine(" ");
+            BulkPayment(credentials, remitaRITs);
+
+            Console.ReadLine();
+        }
+
+        static void AccountEnquiry(Credentials credentials, RemitaRITs remitaRITs)
+        {
+            credentials.MerchantId = "DEMOMDA1234";
+            credentials.ApiToken = "bmR1ZFFFWEx5R2c2NmhnMEk5a25WenJaZWZwbHFFYldKOGY0bHlGZnBZQ1N5WEpXU2Y1dGt3PT0=";
+            credentials.ApiKey = "REVNT01EQTEyMzR8REVNT01EQQ==";
+            credentials.EncKey = "nbzjfdiehurgsxct";
+            credentials.EncVector = "sngtmqpfurxdbkwj";
+            AccountEnquiryPayload payload = new AccountEnquiryPayload();
+            payload.AccountNo = "0581234567890";
+            payload.BankCode = "058";
+            payload.RequestId = "48934799767878902";
+            AccountEnquiryResponseData accountEnquiryResponseData = remitaRITs.accountEnquiry(payload);
+            Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(accountEnquiryResponseData));
+        }
+       
+        static void AddAccount(Credentials credentials, RemitaRITs remitaRITs)
+        {
             credentials.MerchantId = "42192033";
             credentials.ApiToken = "TmNGYlc4RHl6ajdCWUtxNTFmTnR1MG1IRzFjcVByQ1htbmJJL2V1ZVQ5eXl1dmRyN0xvL29nPT0=";
             credentials.ApiKey = "REVNT1RFQ0gxMjM0fERFTU9URUNI";
@@ -64,12 +79,10 @@ namespace RITNetSdkDemo
             addAccountPayload.TransRef = "4893478";
             AddAccountResponseData addAccountResponseData = remitaRITs.addAccount(addAccountPayload);
             Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(addAccountResponseData));
+        }
 
-            Console.WriteLine(" ");
-            Console.WriteLine("#############################");
-            Console.WriteLine("####### BULK PAYMENT #######");
-            Console.WriteLine("#############################");
-            Console.WriteLine(" ");
+        static void BulkPayment(Credentials credentials, RemitaRITs remitaRITs)
+        {
             BulkPaymentPayload bulkPaymentPayload = new BulkPaymentPayload();
             BulkPaymentInfo bulkPaymentInfo = new BulkPaymentInfo();
             bulkPaymentInfo.bankCode = "044";
@@ -80,19 +93,17 @@ namespace RITNetSdkDemo
             bulkPaymentInfo.totalAmount = 1000;
             PaymentDetails paymentDetail = new PaymentDetails();
             paymentDetail.transRef = "5354335";
-            paymentDetail.narration= "Regular Payment";
-            paymentDetail.benficiaryEmail= "qa@test.com";
-            paymentDetail.benficiaryBankCode= "058";
-            paymentDetail.benficiaryAccountNumber= "05829152080517";
-            paymentDetail.amount= 5000;                     
+            paymentDetail.narration = "Regular Payment";
+            paymentDetail.benficiaryEmail = "qa@test.com";
+            paymentDetail.benficiaryBankCode = "058";
+            paymentDetail.benficiaryAccountNumber = "05829152080517";
+            paymentDetail.amount = 5000;
             List<PaymentDetails> paymentDetails = new List<PaymentDetails>();
             paymentDetails.Add(paymentDetail);
             bulkPaymentPayload.paymentDetails = paymentDetails;
             bulkPaymentPayload.bulkPaymentInfo = bulkPaymentInfo;
             BulkPaymentResponseData bulkPaymentResponseData = remitaRITs.bulkPayment(bulkPaymentPayload);
             Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(bulkPaymentResponseData));
-
-            Console.ReadLine();
         }
     }
 }
