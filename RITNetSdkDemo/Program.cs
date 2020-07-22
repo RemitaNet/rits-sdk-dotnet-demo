@@ -82,6 +82,11 @@ namespace RITNetSdkDemo
 
         static void BulkPayment(Credentials credentials, RemitaRITs remitaRITs)
         {
+            credentials.MerchantId = "DEMOMDA1234";
+            credentials.ApiToken = "bmR1ZFFFWEx5R2c2NmhnMEk5a25WenJaZWZwbHFFYldKOGY0bHlGZnBZQ1N5WEpXU2Y1dGt3PT0=";
+            credentials.ApiKey = "REVNT01EQTEyMzR8REVNT01EQQ==";
+            credentials.EncKey = "nbzjfdiehurgsxct";
+            credentials.EncVector = "sngtmqpfurxdbkwj";
             BulkPaymentPayload bulkPaymentPayload = new BulkPaymentPayload();
             BulkPaymentInfo bulkPaymentInfo = new BulkPaymentInfo();
             bulkPaymentInfo.bankCode = "044";
