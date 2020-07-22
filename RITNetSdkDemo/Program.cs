@@ -22,7 +22,6 @@ namespace RITNetSdkDemo
             credentials.TimeoutInMilliSec = 10000;
             credentials.ReadWriteTimeoutMilliSec = 150000;
             credentials.Environment = "TEST";
-
             RemitaRITs remitaRITs = new RemitaRITs(credentials);
 
             Console.WriteLine(" ");
