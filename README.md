@@ -2,24 +2,22 @@
 A sample C# Console app to demo RITS SDK
 
 ## Installation
-All merchant credentials needed to use RITs are being setup by instantiating the Credential Class and set the properties 
-in this class accordingly. Properties such as MerchantId, ApiKey, ApiToken, Key, Iv and the Environment needs to be set.
- 
-_Note:_ Environment can either be TEST or LIVE, each of this environment has it respective Credential. Ensure you set the 
-right credentials. By default Environment is TEST
+The following screenshots outlines the steps to installing RITs Nuget(SDK) to your app.
+
+Note: This setup is done on with Microsoft Visual Studio 2019
 
 ![](images/img1.jpg)
 
-![](images/img2.png)
+![](images/img2.jpg)
 
-![](images/img3.png)
+![](images/img3.jpg)
 
-![](images/img4.png)
+![](images/img4.jpg)
 
-![](images/img5.png)
+![](images/img5.jpg)
 
-![](images/img6.png)
+![](images/img6.jpg)
 
-![](images/img7.png)
+![](images/img7.jpg)
 
-![](images/img8.png)
+![](images/img8.jpg)
