@@ -32,18 +32,19 @@ namespace RITNetSdkDemo
             AccountEnquiry(credentials, remitaRITs);
 
             Console.WriteLine(" ");
-            Console.WriteLine("#########################");
-            Console.WriteLine("###### ADD ACCOUNT ######");
-            Console.WriteLine("#########################");
-            Console.WriteLine(" ");
-            AddAccount(credentials, remitaRITs);
-
-            Console.WriteLine(" ");
             Console.WriteLine("############################");
             Console.WriteLine("####### BULK PAYMENT #######");
             Console.WriteLine("############################");
             Console.WriteLine(" ");
             BulkPayment(credentials, remitaRITs);
+
+
+            Console.WriteLine(" ");
+            Console.WriteLine("#########################");
+            Console.WriteLine("###### ADD ACCOUNT ######");
+            Console.WriteLine("#########################");
+            Console.WriteLine(" ");
+            AddAccount(credentials, remitaRITs);
 
             Console.ReadLine();
         }
@@ -58,7 +59,7 @@ namespace RITNetSdkDemo
             AccountEnquiryPayload payload = new AccountEnquiryPayload();
             payload.AccountNo = "0581234567890";
             payload.BankCode = "058";
-            payload.RequestId = "48934799767878902";
+            payload.RequestId = generateRequestID();
             AccountEnquiryResponseData accountEnquiryResponseData = remitaRITs.accountEnquiry(payload);
             Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(accountEnquiryResponseData));
         }
@@ -74,7 +75,7 @@ namespace RITNetSdkDemo
             AddAccountPayload addAccountPayload = new AddAccountPayload();
             addAccountPayload.AccountNo = "0581234567890";
             addAccountPayload.BankCode = "058";
-            addAccountPayload.RequestId = "489347";
+            addAccountPayload.RequestId = generateRequestID();
             addAccountPayload.TransRef = "4893478";
             AddAccountResponseData addAccountResponseData = remitaRITs.addAccount(addAccountPayload);
             Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(addAccountResponseData));
@@ -90,24 +91,29 @@ namespace RITNetSdkDemo
             BulkPaymentPayload bulkPaymentPayload = new BulkPaymentPayload();
             BulkPaymentInfo bulkPaymentInfo = new BulkPaymentInfo();
             bulkPaymentInfo.bankCode = "044";
-            bulkPaymentInfo.batchRef = "123456";
+            bulkPaymentInfo.batchRef = generateRequestID();
             bulkPaymentInfo.debitAccount = "1234565678";
             bulkPaymentInfo.narration = "Regular payment";
-            bulkPaymentInfo.requestId = "865489635";
+            bulkPaymentInfo.requestId = generateRequestID();
             bulkPaymentInfo.totalAmount = 1000;
             PaymentDetails paymentDetail = new PaymentDetails();
-            paymentDetail.transRef = "5354335";
+            paymentDetail.transRef = generateRequestID();
             paymentDetail.narration = "Regular Payment";
             paymentDetail.benficiaryEmail = "qa@test.com";
             paymentDetail.benficiaryBankCode = "058";
             paymentDetail.benficiaryAccountNumber = "05829152080517";
-            paymentDetail.amount = 5000;
+            paymentDetail.amount = 1000;
             List<PaymentDetails> paymentDetails = new List<PaymentDetails>();
             paymentDetails.Add(paymentDetail);
             bulkPaymentPayload.paymentDetails = paymentDetails;
             bulkPaymentPayload.bulkPaymentInfo = bulkPaymentInfo;
             BulkPaymentResponseData bulkPaymentResponseData = remitaRITs.bulkPayment(bulkPaymentPayload);
             Console.WriteLine("++++ RESPONSE: " + JsonConvert.SerializeObject(bulkPaymentResponseData));
+        }
+
+        public static string generateRequestID()
+        {
+            return Guid.NewGuid().ToString("N");
         }
     }
 }
