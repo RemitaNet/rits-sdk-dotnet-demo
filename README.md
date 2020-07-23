@@ -2,7 +2,7 @@
 A sample C# Console app to demo RITS SDK
 
 ## Installation
-The following screenshots outlines the steps to installing RITs Nuget(SDK) to your app.
+The following screenshots outlines the steps to installing RITs Nuget(SDK) to the Demo app.
 
 Note: This setup is done on with Microsoft Visual Studio 2019
 
