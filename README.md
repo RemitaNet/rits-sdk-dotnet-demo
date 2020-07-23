@@ -8,7 +8,7 @@ in this class accordingly. Properties such as MerchantId, ApiKey, ApiToken, Key,
 _Note:_ Environment can either be TEST or LIVE, each of this environment has it respective Credential. Ensure you set the 
 right credentials. By default Environment is TEST
 
-![](C:/Projects/rits-sdk-dotnet-demo/images/img1.jpg)
+![](images/img1.jpg)
 
 ![](images/img2.png)
 
